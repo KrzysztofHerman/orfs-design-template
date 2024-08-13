@@ -50,7 +50,7 @@ make_io_sites \
 
 # Place Pads
 place_pad -row IO_SOUTH -location [calc_horizontal_pad_location  0] {sg13g2_chipio_12}
-place_pad -row IO_SOUTH -location [calc_horizontal_pad_location  1] {sg13g2_chip_out_0} 
+place_pad -row IO_SOUTH -location [calc_horizontal_pad_location  1] {sg13g2_chip_analog_0}  
 place_pad -row IO_SOUTH -location [calc_horizontal_pad_location  2] {sg13g2_clk}
 place_pad -row IO_SOUTH -location [calc_horizontal_pad_location  3] {sg13g2_chip_out_1} 
 place_pad -row IO_SOUTH -location [calc_horizontal_pad_location  4] {sg13g2_rst_n}

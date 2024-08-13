@@ -192,9 +192,14 @@ module ihp_top (
 
 
   /* outputs */
- sg13g2_IOPadOut4mA sg13g2_chip_out_0 (
-      .c2p(chip_out[0]),
-      .pad(chip_out_PAD[0])
+ // sg13g2_IOPadOut4mA sg13g2_chip_out_0 (
+ //      .c2p(chip_out[0]),
+ //      .pad(chip_out_PAD[0])
+ //  );
+ //
+ sg13g2_IOPadAnalog sg13g2_chip_analog_0 (
+      .pad(chip_out_PAD[0]),
+      .padres(chip_out[0])
   );
 
  sg13g2_IOPadOut4mA sg13g2_chip_out_1 (
