@@ -2,7 +2,6 @@ export DESIGN_NICKNAME = ihp-chip
 export DESIGN_NAME = ihp_top
 export PLATFORM    = ihp-sg13g2
 
-#export ENABLE_TT_LOGO ?= 1
 
 
 export VERILOG_FILES = $(DESIGN_HOME)/src/$(DESIGN_NICKNAME)/ihp_top.v 
@@ -38,11 +37,3 @@ export CDL_FILE = \
     $(IHP_PDK_ROOT)/$(PDK)/libs.ref/sg13g2_io/cdl/sg13g2_io.cdl \
     $(DESIGN_HOME)/$(PLATFORM)/$(DESIGN_NICKNAME)/macros/bondpad/cdl/bondpad_70x70.cdl
 
-ifeq ($(ENABLE_TT_LOGO), 1)
-    export ADDITIONAL_LEFS += \
-        $(DESIGN_HOME)/$(PLATFORM)/$(DESIGN_NICKNAME)/macros/tt_logo/lef/tt_logo.lef
-    export ADDITIONAL_GDS += \
-        $(DESIGN_HOME)/$(PLATFORM)/$(DESIGN_NICKNAME)/macros/tt_logo/gds/tt_logo.gds.gz
-    export MACRO_PLACEMENT = \
-        $(DESIGN_HOME)/$(PLATFORM)/$(DESIGN_NICKNAME)/macro_placement.cfg
-endif
